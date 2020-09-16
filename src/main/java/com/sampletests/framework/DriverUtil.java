@@ -74,12 +74,20 @@ public class DriverUtil {
 						options.addArguments("window-size=1400x800");
 						driver = new ChromeDriver(options);
 						break;
-
-
 				}
-				if (driver != null) {
-					driver.manage().window().maximize();
-				}
+			}else {
+				LOGGER.info("Setting the default driver to be Headless Chrome using "+osName.toLowerCase()+" OS default binary and driver");
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("no-sandbox");
+				options.addArguments("headless");
+				options.addArguments("disable-extensions");
+				options.addArguments("disable-dev-shm-usage");
+				options.addArguments("start-maximized");
+				options.addArguments("window-size=1400,800");
+				driver = new ChromeDriver(options);
+			}
+			if (driver != null) {
+				driver.manage().window().maximize();
 			}
 		}
 
