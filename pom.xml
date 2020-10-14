@@ -15,7 +15,7 @@
         <!--<selenium-server.version>3.6.0</selenium-server.version> -->
         <!--<guava.version>21.0</guava.version> -->
         <cucumber-core.version>1.2.4</cucumber-core.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <!--Cucumber reports -->
         <cucumber-reports.version>1.0.6</cucumber-reports.version>
         <maven-cucumber-reporting.version>3.8.0</maven-cucumber-reporting.version>
